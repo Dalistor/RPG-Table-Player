@@ -5,25 +5,21 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 @Entity(
-    tableName = "characters",
+    tableName = "character_inventory_item",
     foreignKeys = [
         ForeignKey(
-            entity = SessionEntity::class,
+            entity = CharacterInventoryEntity::class,
             parentColumns = ["id"],
-            childColumns = ["sessionId"],
+            childColumns = ["characterInventoryId"],
             onDelete = ForeignKey.CASCADE
         )
     ]
 )
-data class Character (
+data class CharacterInventoryItemEntity (
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
-    val sessionId: Long,
+    val characterInventoryId: Long,
 
     val name: String,
-    val description: String,
-
-    val atributes: List<SessionAttrs>,
-
-    val createdAt: Long = System.currentTimeMillis()
+    val description: String?,
 )

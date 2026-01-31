@@ -5,23 +5,23 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 @Entity(
-    tableName = "sessions_attributes",
+    tableName = "character_attributes",
     foreignKeys = [
         ForeignKey(
-            entity = Character::class,
+            entity = CharacterEntity::class,
             parentColumns = ["id"],
             childColumns = ["characterId"],
             onDelete = ForeignKey.CASCADE
         ),
         ForeignKey(
-            entity = SessionAttrs::class,
+            entity = SessionAttrsEntity::class,
             parentColumns = ["id"],
             childColumns = ["sessionAttrId"],
             onDelete = ForeignKey.CASCADE
         )
     ]
 )
-data class CharacterAttrs(
+data class CharacterAttrsEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
     val characterId: Long,

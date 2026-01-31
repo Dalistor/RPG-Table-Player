@@ -10,7 +10,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "app.datalistor.rpgtableplayer"
+        applicationId = "app.dalistor.rpgtableplayer"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -38,6 +38,8 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     implementation("androidx.datastore:datastore-preferences:1.1.1")
+    implementation("androidx.activity:activity-compose:1.9.3")
+
 
     ksp("androidx.room:room-compiler:2.6.1")
 

@@ -15,7 +15,7 @@ import androidx.room.PrimaryKey
         )
     ]
 )
-data class SessionAttrs(
+data class SessionAttrsEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
     val sessionId: Long,
