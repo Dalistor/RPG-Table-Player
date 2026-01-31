@@ -14,10 +14,6 @@ class CharacterSkillRepository (
         return characterSkillDao.getAllByCharacterId(characterId)
     }
 
-    suspend fun getAllBySessionId(sessionId: Long): List<CharacterSkillEntity> {
-        return characterSkillDao.getAllBySessionId(sessionId)
-    }
-
     suspend fun delete(characterSkillEntity: CharacterSkillEntity): Int {
         return characterSkillDao.delete(characterSkillEntity)
     }
