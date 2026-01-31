@@ -33,6 +33,8 @@ data class CharacterAttrsEntity(
     val minValue: Int,
     val maxValue: Int?,
 
+    val value: Int,
+
     val createdAt: Long = System.currentTimeMillis()
 )
 
